@@ -51,9 +51,6 @@ const AddTableData = () => {
     },
   });
 
-
-
-
   return (
     <>
       <div className="heading">
@@ -142,7 +139,11 @@ const AddTableData = () => {
             <br />
             <br />
             <select
-              className="student-input" name="class" onBlur={handleBlur} onChange={handleChange}>
+              className="student-input"
+              name="class"
+              onBlur={handleBlur}
+              onChange={handleChange}
+            >
               <option>select Class</option>
               <option>09</option>
               <option>10</option>
@@ -162,7 +163,11 @@ const AddTableData = () => {
             <br />
             <br />
             <select
-              className="student-input" name="division" onBlur={handleBlur} onChange={handleChange}>
+              className="student-input"
+              name="division"
+              onBlur={handleBlur}
+              onChange={handleChange}
+            >
               <option>select Division</option>
               <option>A</option>
               <option>B</option>
@@ -259,11 +264,10 @@ const AddTableData = () => {
               autoComplete="off"
             />
             <br />
-            <p>
+
             {errors.country && touched.country ? (
               <i style={{ color: "red" }}>{errors.country}</i>
             ) : null}
-            </p>
           </div>
         </div>
 
@@ -298,14 +302,16 @@ const AddTableData = () => {
 
         <div className="main-input-container main-btn-container">
           <div className="btn-data">
-            <button className="route-btn" onClick={() => resetForm()}>Reset</button>
+            <input type="button" className="route-btn" value="Reset" onClick={() => alert("reset button clicked")} />
           </div>
           <div className="btn-data">
-            <button className="route-btn btn-center" type="submit">Submit</button>
+            <button className="route-btn btn-center" type="submit">
+              Submit
+            </button>
           </div>
           <div className="btn-data">
-            <button className="route-btn" >
-              <Link to="/" style={{ textDecoration: "none", color: "blue" }}>
+            <button className="route-btn">
+              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
                 Cancel
               </Link>
             </button>
