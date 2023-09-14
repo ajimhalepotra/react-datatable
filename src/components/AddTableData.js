@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Link } from "react-router-dom";
 // import "./AddTableData.css";
-import '../Layout/heading.css'
+import "../Layout/heading.css";
 
 const initialValues = {
   name: "",
@@ -14,51 +14,67 @@ const initialValues = {
   date: "",
   // male: "",
   // female: "",
+  city: "",
+  state: "",
+  country: "",
 };
 
 const AddTableData = () => {
-  const { handleSubmit, handleBlur, handleChange, values, errors, touched, resetForm } =
-    useFormik({
-      initialValues,
+  const {
+    handleSubmit,
+    handleBlur,
+    handleChange,
+    values,
+    errors,
+    touched,
+    resetForm,
+  } = useFormik({
+    initialValues,
 
-      validationSchema: Yup.object({
-        name: Yup.string().min(2).max(20).required("Plese enter your name..."),
-        age: Yup.string().required("Plese enter your age..."),
-        mobile: Yup.string().required("Plese enter your mobile no..."),
-        class: Yup.string().required("Plese select class..."),
-        division: Yup.string().required("Plese select division..."),
-        date: Yup.string().required("Plese select date..."),
-        // male: Yup.string().required(),
-        // female: Yup.string().required(),
-      }),
+    validationSchema: Yup.object({
+      name: Yup.string().min(2).max(20).required("Plese enter your name..."),
+      age: Yup.string().required("Plese enter your age..."),
+      mobile: Yup.string().required("Plese enter your mobile no..."),
+      class: Yup.string().required("Plese select class..."),
+      division: Yup.string().required("Plese select division..."),
+      date: Yup.string().required("Plese select date..."),
+      // male: Yup.string().required(),
+      // female: Yup.string().required(),
+      city: Yup.string().required(),
+      state: Yup.string().required(),
+      country: Yup.string().required(),
+    }),
 
-      onSubmit: (values) => {
-        console.log("Add Student Data:", values);
-        // action.resetForm();
-      },
-    });
+    onSubmit: (values) => {
+      console.log("Add Student Data:", values);
+      // action.resetForm();
+    },
+  });
 
-    
+
+
 
   return (
     <>
-
-    <div className="heading">
-      <div className="title">
-      <h1>Add New Student</h1>
+      <div className="heading">
+        <div className="title">
+          <h1>Add New Student</h1>
+        </div>
+        <div>
+          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+            <button className="route-btn">Back</button>
+          </Link>
+        </div>
       </div>
-      <div>
-      <Link to="/" style={{textDecoration:"none", color:"white"}}><button className="route-btn">Back</button></Link>
-      </div>
-    </div>
 
       <form onSubmit={handleSubmit}>
-        <div style={{ display: "flex" }}>
-          <div>
-            <label>Name</label>
+        <div className="main-input-container">
+          <div className="main-input-chiled">
+            <label className="input-label">Name</label>
             <br />
             <br />
             <input
+              className="student-input"
               type="text"
               placeholder="Enter your name"
               name="name"
@@ -75,11 +91,12 @@ const AddTableData = () => {
 
           <br />
 
-          <div>
-            <label>Age</label>
+          <div className="main-input-chiled">
+            <label className="input-label">Age</label>
             <br />
             <br />
             <input
+              className="student-input"
               type="number"
               placeholder="Enter your age"
               name="age"
@@ -96,11 +113,12 @@ const AddTableData = () => {
 
           <br />
 
-          <div>
-            <label>Mobile No.</label>
+          <div className="main-input-chiled">
+            <label className="input-label">Mobile No.</label>
             <br />
             <br />
             <input
+              className="student-input"
               type="number"
               placeholder="Enter your mobile no"
               name="mobile"
@@ -114,21 +132,17 @@ const AddTableData = () => {
               <i style={{ color: "red" }}>{errors.mobile}</i>
             ) : null}
           </div>
-
         </div>
 
-              <br />
+        <br />
 
-        <div style={{display: "flex"}}>
-
-          <div>
-            <label>Class</label>
-            <br /><br />
+        <div className="main-input-container">
+          <div className="main-input-chiled">
+            <label className="input-label">Class</label>
+            <br />
+            <br />
             <select
-            name="class"
-            onBlur={handleBlur}
-            onChange={handleChange}
-            >
+              className="student-input" name="class" onBlur={handleBlur} onChange={handleChange}>
               <option>select Class</option>
               <option>09</option>
               <option>10</option>
@@ -136,19 +150,19 @@ const AddTableData = () => {
               <option>12</option>
             </select>
             <br />
-            {errors.class && touched.class ? <i style={{color:"red"}} >{errors.class}</i> : null}
+            {errors.class && touched.class ? (
+              <i style={{ color: "red" }}>{errors.class}</i>
+            ) : null}
           </div>
 
           <br />
 
-          <div>
-            <label>Division</label>
-            <br /><br />
+          <div className="main-input-chiled">
+            <label className="input-label">Division</label>
+            <br />
+            <br />
             <select
-            name="division"
-            onBlur={handleBlur}
-            onChange={handleChange}
-            >
+              className="student-input" name="division" onBlur={handleBlur} onChange={handleChange}>
               <option>select Division</option>
               <option>A</option>
               <option>B</option>
@@ -157,65 +171,144 @@ const AddTableData = () => {
               <option>E</option>
             </select>
             <br />
-            {errors.division && touched.division ? <i style={{color:"red"}} >{errors.division}</i> : null}
+            {errors.division && touched.division ? (
+              <i style={{ color: "red" }}>{errors.division}</i>
+            ) : null}
           </div>
 
           <br />
 
-          <div>
-            <label>Date</label>
-            <br /><br />
-            <input 
-            type="date" 
-            name="date"
-            value={values.date}
-            onBlur={handleBlur}
-            onChange={handleChange}
+          <div className="main-input-chiled">
+            <label className="input-label">Date</label>
+            <br />
+            <br />
+            <input
+              className="student-input"
+              type="date"
+              name="date"
+              value={values.date}
+              onBlur={handleBlur}
+              onChange={handleChange}
             />
             <br />
-            {errors.date && touched.date ? <i style={{color:"red"}}>{errors.date}</i> : null}
+            {errors.date && touched.date ? (
+              <i style={{ color: "red" }}>{errors.date}</i>
+            ) : null}
           </div>
         </div>
 
         <br />
 
-        <div>
+        <div className="main-input-container">
+          <div className="main-input-chiled">
+            <label className="input-label">City</label>
+            <br />
+            <br />
+            <input
+              className="student-input"
+              type="text"
+              placeholder="Enter your city"
+              name="city"
+              value={values.city}
+              onBlur={handleBlur}
+              onChange={handleChange}
+              autoComplete="off"
+            />
+            <br />
+            {errors.city && touched.city ? (
+              <i style={{ color: "red" }}>{errors.city}</i>
+            ) : null}
+          </div>
+
+          <br />
+
+          <div className="main-input-chiled">
+            <label className="input-label">State</label>
+            <br />
+            <br />
+            <input
+              className="student-input"
+              type="text"
+              placeholder="Enter your state"
+              name="state"
+              value={values.state}
+              onBlur={handleBlur}
+              onChange={handleChange}
+              autoComplete="off"
+            />
+            <br />
+            {errors.state && touched.state ? (
+              <i style={{ color: "red" }}>{errors.state}</i>
+            ) : null}
+          </div>
+
+          <br />
+
+          <div className="main-input-chiled">
+            <label className="input-label">Country</label>
+            <br />
+            <br />
+            <input
+              className="student-input"
+              type="text"
+              placeholder="Enter your country"
+              name="country"
+              value={values.country}
+              onBlur={handleBlur}
+              onChange={handleChange}
+              autoComplete="off"
+            />
+            <br />
+            <p>
+            {errors.country && touched.country ? (
+              <i style={{ color: "red" }}>{errors.country}</i>
+            ) : null}
+            </p>
+          </div>
+        </div>
+
+        <br />
+
+        {/* <div>
           <div>
             <label>Gander</label>
             <br />
-            <input 
-            type="radio"
-            name="male"
-            value={values.male}
-            onBlur={handleBlur}
-            onChange={handleChange}
+            <input
+              type="radio"
+              name="male"
+              value={values.male}
+              onBlur={handleBlur}
+              onChange={handleChange}
             />
             <label>Male</label>
 
-            <input 
-            type="radio"
-            name="male"
-            value={values.female}
-            onBlur={handleBlur}
-            onChange={handleChange}
-            />
+              
+
+            <input
+              type="radio"
+              name="male"
+              value={values.female}
+              onBlur={handleBlur}
+              onChange={handleChange}            />
             <label>Female</label>
             <br />
-            {/* {errors.male ? <i style={{color: "red"}} >{errors.male}</i> : null} */}
+            {errors.male ? <i style={{color: "red"}} >{errors.male}</i> : null}
           </div>
-        </div>
+        </div> */}
 
-        <br />
-
-        <div style={{display:"flex"}} >
-          <div>
-            <button onClick={() => resetForm()}>Reset</button>
+        <div className="main-input-container main-btn-container">
+          <div className="btn-data">
+            <button className="route-btn" onClick={() => resetForm()}>Reset</button>
           </div>
-          <div>
-            <button  type="submit" >Submit</button>
+          <div className="btn-data">
+            <button className="route-btn btn-center" type="submit">Submit</button>
           </div>
-          <div>
-            <button><Link to="/" style={{textDecoration: "none", color:"black" }} >Cancel</Link></button>
+          <div className="btn-data">
+            <button className="route-btn" >
+              <Link to="/" style={{ textDecoration: "none", color: "blue" }}>
+                Cancel
+              </Link>
+            </button>
           </div>
         </div>
       </form>
@@ -224,4 +317,3 @@ const AddTableData = () => {
 };
 
 export default AddTableData;
-
