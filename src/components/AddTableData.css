@@ -1,0 +1,26 @@
+.main-container-first{
+    display: flex;
+    width: 100%;
+
+}
+.main-container-chield{
+    width: 30%;
+    margin: 5px 5%;
+}
+.lable{
+    font-size: 18px;
+    margin: 15px 10px;
+    
+}
+.inputtxt{
+    width: 100%;
+    height: 40px;
+}
+.btn-main-contaoner{
+    display: flex;
+    width: 100%;
+}
+.btn{
+    width: 30%;
+    margin: 50px 5%;
+}

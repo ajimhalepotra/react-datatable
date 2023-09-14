@@ -1,0 +1,33 @@
+.heading{
+    display: flex;
+}
+.title{
+    width: 85%;
+}
+.add button{
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+    background-color: rgb(126, 126, 197);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    margin-top: 25px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.spanicon{
+    font-size: 14px;
+    margin: 2px 5px;
+}
+.route-btn{
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    outline: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 12px;
+}
