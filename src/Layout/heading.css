@@ -30,6 +30,7 @@
   font-family: Calibri;
   font-weight: bold;
   font-size: 20px;
+ 
 }
 
 .main-input-container {
@@ -66,10 +67,15 @@
   font-family: Calibri;
 }
 
+.select-option{
+    width: 101%;
+}
+
 .btn-data {
   text-align: center;
   margin: 0px 10px;
   color: skyblue;
+  justify-content: center;
 }
 .btn-data button {
   height: 40px;
@@ -79,6 +85,7 @@
   justify-content: end;
   width: 98%;
   padding-right: 0px;
+  margin-bottom: 20px;
 }
 
 /* media  1024 */
@@ -143,7 +150,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .title {
+  .heading.title {
     font-size: 10px;
     width: 75%;
   }

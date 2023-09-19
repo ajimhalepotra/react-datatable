@@ -142,7 +142,7 @@ const AddTableData = () => {
             <br />
             <br />
             <select
-              className="student-input"
+              className="student-input select-option"
               name="class"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -167,7 +167,7 @@ const AddTableData = () => {
             <br />
             <br />
             <select
-              className="student-input"
+              className="student-input select-option"
               name="division"
               onBlur={handleBlur}
               onChange={handleChange}
@@ -280,7 +280,7 @@ const AddTableData = () => {
           </div>
         </div>
 
-        <br />
+        
 
         {/* <div>
           <div>
