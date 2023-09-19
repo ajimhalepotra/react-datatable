@@ -144,7 +144,7 @@ const AddTableData = () => {
               onBlur={handleBlur}
               onChange={handleChange}
             >
-              <option>select Class</option>
+              <option>Select class</option>
               <option>09</option>
               <option>10</option>
               <option>11</option>
@@ -168,7 +168,7 @@ const AddTableData = () => {
               onBlur={handleBlur}
               onChange={handleChange}
             >
-              <option>select Division</option>
+              <option>Select division</option>
               <option>A</option>
               <option>B</option>
               <option>C</option>
@@ -302,16 +302,18 @@ const AddTableData = () => {
 
         <div className="main-input-container main-btn-container">
           <div className="btn-data">
-            <input type="button" className="route-btn" value="Reset" onClick={() => alert("reset button clicked")} />
+            <button type="reset" className="route-btn" onClick={() => alert("reset button clicked")}>
+            Reset  
+            </button>
           </div>
           <div className="btn-data">
-            <button className="route-btn btn-center" type="submit">
+            <button className="route-btn" type="submit">
               Submit
             </button>
           </div>
           <div className="btn-data">
-            <button className="route-btn">
-              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+            <button className="route-btn" style={{ backgroundColor:"white", border:"2px solid skyblue"}}>
+              <Link to="/" style={{ textDecoration: "none",  color: "skyblue"}}>
                 Cancel
               </Link>
             </button>
