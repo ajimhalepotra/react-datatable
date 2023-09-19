@@ -325,7 +325,7 @@ const AddTableData = () => {
             </button>
           </div>
           <div className="btn-data">
-            <Link to="/" style={{ textDecoration: "none", color: "skyblue" }}>
+            <Link to="/student-data" style={{ textDecoration: "none", color: "skyblue" }}>
               <button
                 className="route-btn"
                 style={{
