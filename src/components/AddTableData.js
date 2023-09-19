@@ -45,9 +45,9 @@ const AddTableData = () => {
       country: Yup.string().required(),
     }),
 
-    onSubmit: (values) => {
+    onSubmit: (values, action) => {
       console.log("Add Student Data:", values);
-      // action.resetForm();
+      action.resetForm();
     },
   });
 
@@ -84,6 +84,7 @@ const AddTableData = () => {
             {errors.name && touched.name ? (
               <i style={{ color: "red" }}>{errors.name}</i>
             ) : null}
+            <br />
           </div>
 
           <br />
@@ -106,6 +107,7 @@ const AddTableData = () => {
             {errors.age && touched.age ? (
               <i style={{ color: "red" }}>{errors.age}</i>
             ) : null}
+            <br />
           </div>
 
           <br />
@@ -128,6 +130,7 @@ const AddTableData = () => {
             {errors.mobile && touched.mobile ? (
               <i style={{ color: "red" }}>{errors.mobile}</i>
             ) : null}
+            <br />
           </div>
         </div>
 
@@ -154,6 +157,7 @@ const AddTableData = () => {
             {errors.class && touched.class ? (
               <i style={{ color: "red" }}>{errors.class}</i>
             ) : null}
+            <br />
           </div>
 
           <br />
@@ -179,6 +183,7 @@ const AddTableData = () => {
             {errors.division && touched.division ? (
               <i style={{ color: "red" }}>{errors.division}</i>
             ) : null}
+            <br />
           </div>
 
           <br />
@@ -199,6 +204,7 @@ const AddTableData = () => {
             {errors.date && touched.date ? (
               <i style={{ color: "red" }}>{errors.date}</i>
             ) : null}
+            <br />
           </div>
         </div>
 
@@ -223,6 +229,7 @@ const AddTableData = () => {
             {errors.city && touched.city ? (
               <i style={{ color: "red" }}>{errors.city}</i>
             ) : null}
+            <br />
           </div>
 
           <br />
@@ -245,6 +252,7 @@ const AddTableData = () => {
             {errors.state && touched.state ? (
               <i style={{ color: "red" }}>{errors.state}</i>
             ) : null}
+            <br />
           </div>
 
           <br />
@@ -268,6 +276,7 @@ const AddTableData = () => {
             {errors.country && touched.country ? (
               <i style={{ color: "red" }}>{errors.country}</i>
             ) : null}
+            <br />
           </div>
         </div>
 
@@ -300,10 +309,14 @@ const AddTableData = () => {
           </div>
         </div> */}
 
-        <div className="main-input-container main-btn-container">
+        <div className="main-btn-container">
           <div className="btn-data">
-            <button type="reset" className="route-btn" onClick={() => alert("reset button clicked")}>
-            Reset  
+            <button
+              type="reset"
+              className="route-btn"
+              onClick={() => alert("reset button clicked")}
+            >
+              Reset
             </button>
           </div>
           <div className="btn-data">
@@ -312,11 +325,18 @@ const AddTableData = () => {
             </button>
           </div>
           <div className="btn-data">
-            <button className="route-btn" style={{ backgroundColor:"white", border:"2px solid skyblue"}}>
-              <Link to="/" style={{ textDecoration: "none",  color: "skyblue"}}>
+            <Link to="/" style={{ textDecoration: "none", color: "skyblue" }}>
+              <button
+                className="route-btn"
+                style={{
+                  backgroundColor: "white",
+                  border: "2px solid skyblue",
+                  color: "skyblue",
+                }}
+              >
                 Cancel
-              </Link>
-            </button>
+              </button>
+            </Link>
           </div>
         </div>
       </form>

@@ -1,194 +1,198 @@
-.heading{
-    display: flex;
-    /* position: fixed; */
-    font-family: Calibri;
+.heading {
+  display: flex;
+  /* position: fixed; */
+  font-family: Calibri;
 }
-.title{
-    width: 90%;
-    padding-left: 20px;
-    color:#2d0e4f;
-    font-weight: bold;
-    font-family: Calibri;
-}
-
-.spanicon{
-    font-size: 14px;
-    margin: 2px 5px;
-    font-family: Calibri;
-}
-.route-btn{
-    background-color: rgb(121, 72, 255);
-    color: white;
-    text-decoration: none;
-    border: 2px solid rgb(121, 72, 255);
-    outline: none;
-    width: 100px;
-    height: 40px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 20px;
-    font-family: Calibri;
-    font-weight: bold;
-    font-size: 20px;
+.title {
+  width: 90%;
+  padding-left: 20px;
+  color: #2d0e4f;
+  font-weight: bold;
+  font-family: Calibri;
 }
 
-
-.main-input-container{
-    display: flex;
-    width: 98%;
-    /* border: 1px solid red; */
-    margin: 0px 10px;
-    padding: 5px  0;
+.spanicon {
+  font-size: 14px;
+  margin: 2px 5px;
+  font-family: Calibri;
+}
+.route-btn {
+  background-color: rgb(121, 72, 255);
+  color: white;
+  text-decoration: none;
+  border: 2px solid rgb(121, 72, 255);
+  outline: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: Calibri;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-
-.main-input-chiled{
-    width: 30%;
-    margin: 0px 20px;
+.main-input-container {
+  display: flex;
+  width: 98%;
+  /* border: 1px solid red; */
+  margin: 0px 10px;
+  padding: 5px 0;
+  flex-wrap: wrap;
 }
 
-
-.input-label{
-    font-size: 20px;
-    color: #2d0e4f;
-    font-weight: bold;
-    font-family: Calibri;
+.main-input-chiled {
+  width: 30%;
+  margin: 0px 20px;
 }
 
-.student-input{
-    width: 100%;
-    height: 40px;
-    font-size: 16px;
-    border-radius: 4px;
-    border: none;
-    box-shadow: 1px 1px 10px rgb(171, 170, 170);
-    padding-left: 10px;
-    color:#2d0e4f;
-    font-weight: bold;
-    font-family: Calibri;
+.input-label {
+  font-size: 20px;
+  color: #2d0e4f;
+  font-weight: bold;
+  font-family: Calibri;
 }
 
-.btn-data{
-    /* width: 100%; */
-    text-align: center;
-    position: relative;
-    top: 60px;
-    right: -65%;
-    margin: 0px 10px;
-    
-}
-.btn-data button{
-    height: 40px;
-
-}
-.main-btn-container{
-    position: absolute;
-    width: 60%;
-    justify-content: end;
+.student-input {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 1px 1px 10px rgb(171, 170, 170);
+  padding-left: 10px;
+  color: #2d0e4f;
+  font-weight: bold;
+  font-family: Calibri;
 }
 
-
+.btn-data {
+  text-align: center;
+  margin: 0px 10px;
+  color: skyblue;
+}
+.btn-data button {
+  height: 40px;
+}
+.main-btn-container {
+  display: flex;
+  justify-content: end;
+  width: 98%;
+  padding-right: 0px;
+}
 
 /* media  1024 */
-@media (max-width: 1024px) and (max-width: 1224px){
-    .title{
-        width: 89%;
-        height: 100%;
-    }
+@media screen and (max-width: 1224px) {
+  .title {
+    width: 90%;
+    height: 100%;
+  }
+
+  .main-input-container {
+    flex-wrap: nowrap;
+  }
 }
 
-@media screen and (max-width: 1024px){
-    .heading .title{
-        width: 86%;
-    }
+@media screen and (max-width: 1024px) {
+  .heading .title {
+    width: 86%;
+  }
 }
 
-@media screen and (max-width: 768px){
-    .heading .title{
-        width: 82%;
-    }
+@media screen and (max-width: 768px) {
+  .heading .title {
+    width: 82%;
+  }
+
+  .main-input-container {
+    flex-wrap: wrap;
+  }
 }
 
+@media screen and (max-width: 600px) {
+  .heading .title {
+    width: 75%;
+    font-size: 14px;
+    padding-top: 6px;
+  }
 
-@media screen and (max-width: 600px){
-    .heading .title{
-        width: 78%;
-        font-size: 14px;
-        padding-top: 6px;
-    }
+  .route-btn {
+    width: 90px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 18px;
+  }
 
-    .route-btn{
-        width: 90px;
-        height: 40px;
-        border-radius: 6px;
-        font-size: 18px;
-    }
+  .main-input-chiled {
+    width: 90%;
+    padding: 0;
+    font-size: 12px;
+  }
 
-    .main-input-chiled{
-        width: 90%;
-        padding: 0;
-        font-size: 12px;
-    }
+  .input-label {
+    font-size: 12px;
+  }
 
-    .input-label{
-        font-size: 12px;
-    }
-    
-
-    .student-input{
-        height: 35px;
-        font-size: 12px;
-        border-radius: 2px;
-        box-shadow: 1px 1px 5px rgb(171, 170, 170);
-        padding-left: 10px;
-    }
+  .student-input {
+    height: 35px;
+    font-size: 12px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 5px rgb(171, 170, 170);
+    padding-left: 10px;
+  }
 }
 
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 10px;
+    width: 75%;
+  }
 
-@media screen and (max-width: 480px){
-    .route-btn{
-        width: 70px;
-        height: 25px;
-        border-radius: 4px;
-        font-size: 12px;
-        margin-top: 30px;
-    }
+  .route-btn {
+    width: 70px;
+    height: 25px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 30px;
+  }
 
+  .student-input {
+    height: 35px;
+    font-size: 10px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 5px rgb(171, 170, 170);
+    padding-left: 5px;
+  }
 
-    .student-input{
-        height: 35px;
-        font-size: 10px;
-        border-radius: 2px;
-        box-shadow: 1px 1px 5px rgb(171, 170, 170);
-        padding-left: 10px;
+  .btn-data button {
+    height: 25px;
+  }
 
-    }
+  .main-input-container {
+    margin: 0 5px;
+  }
 
-    .btn-data button{
-        height: 25px;
-    }
-
+  .btn-data {
+    right: -60%;
+    margin: 0px 5px;
+  }
 }
 
+@media screen and (max-width: 320px) {
+  .heading .title {
+    width: 70%;
+    font-size: 11px;
+    padding-top: 6px;
+  }
 
+  .route-btn {
+    width: 70px;
+    height: 30px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
 
-
-
-@media screen and (max-width: 320px){
-    .heading .title{
-        width: 70%;
-        font-size: 11px;
-        padding-top: 6px;
-    }
-
-    .route-btn{
-        width: 70px;
-        height: 30px;
-        border-radius: 6px;
-        font-size: 14px;
-    }
-
-    .btn-data button{
-        height: 30px;
-    }
+  .btn-data button {
+    height: 30px;
+  }
 }
