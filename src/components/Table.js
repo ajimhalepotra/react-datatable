@@ -41,7 +41,7 @@ function TableData() {
         <h1>Student</h1>
       </div>
       <div>
-      <Link to="/add-table-data"  style={{textDecoration:"none", color:"white"}} ><button className="route-btn">Add</button></Link>
+      <Link to="/add-student"  style={{textDecoration:"none", color:"white"}} ><button className="route-btn">Add</button></Link>
       </div>
     </div>
       <TableContainer>
@@ -52,6 +52,12 @@ function TableData() {
               <TableCell>Name</TableCell>
               <TableCell>Age</TableCell>
               <TableCell>Mobile</TableCell>
+              <TableCell>Class</TableCell>
+              <TableCell>Division</TableCell>
+              <TableCell>Date</TableCell>
+              <TableCell>City</TableCell>
+              <TableCell>State</TableCell>
+              <TableCell>Country</TableCell>
               <TableCell>Action</TableCell>
             </TableRow>
           </TableHead>
@@ -61,7 +67,13 @@ function TableData() {
                 <TableCell>{e.id}</TableCell>
                 <TableCell>{e.name}</TableCell>
                 <TableCell>{e.age}</TableCell>
-                <TableCell>{e.mobile}</TableCell>
+                <TableCell></TableCell>
+                <TableCell></TableCell>
+                <TableCell></TableCell>
+                <TableCell></TableCell>
+                <TableCell></TableCell>
+                <TableCell></TableCell>
+                <TableCell></TableCell>
                 <TableCell>
                   <MoreVertIcon
                     sx={{ cursor: "pointer" }}

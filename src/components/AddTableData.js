@@ -45,8 +45,8 @@ const AddTableData = () => {
       country: Yup.string().required(),
     }),
 
-    onSubmit: (values, action) => {
-      console.log("Add Student Data:", values);
+    onSubmit: (value, action) => {
+      console.log("Add Student Data:", value);
       action.resetForm();
     },
   });
@@ -58,7 +58,7 @@ const AddTableData = () => {
           <h1>Add New Student</h1>
         </div>
         <div>
-          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+          <Link to="/student-data" style={{ textDecoration: "none", color: "white" }}>
             <button className="route-btn">Back</button>
           </Link>
         </div>

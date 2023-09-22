@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
     <div>
       <button>
-      <Link
+      <NavLink
         to="/add-table-data"
         style={{
           textDecoration: "none",
@@ -20,7 +20,7 @@ function Navbar() {
         }}
       >
         Add
-      </Link>
+      </NavLink>
       </button>
     </div>
   );
