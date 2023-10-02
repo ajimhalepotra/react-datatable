@@ -32,12 +32,12 @@ const AddTableData = () => {
     initialValues,
 
     validationSchema: Yup.object({
-      name: Yup.string().min(2).max(20).required("Plese enter your name..."),
-      age: Yup.string().required("Plese enter your age..."),
-      mobile: Yup.string().required("Plese enter your mobile no..."),
-      class: Yup.string().required("Plese select class..."),
-      division: Yup.string().required("Plese select division..."),
-      date: Yup.string().required("Plese select date..."),
+      name: Yup.string().min(2).max(20).required(),
+      age: Yup.string().required(),
+      mobile: Yup.string().min(10).max(12).required(),
+      class: Yup.string().required(),
+      division: Yup.string().required(),
+      date: Yup.string().required(),
       // male: Yup.string().required(),
       // female: Yup.string().required(),
       city: Yup.string().required(),
@@ -82,7 +82,7 @@ const AddTableData = () => {
             />
             <br />
             {errors.name && touched.name ? (
-              <i style={{ color: "red" }}>{errors.name}</i>
+              <i style={{ color: "red", fontWeight:"bold" }}>{errors.name}</i>
             ) : null}
             <br />
           </div>
@@ -105,7 +105,7 @@ const AddTableData = () => {
             />
             <br />
             {errors.age && touched.age ? (
-              <i style={{ color: "red" }}>{errors.age}</i>
+              <i style={{ color: "red", fontWeight:"bold"  }}>{errors.age}</i>
             ) : null}
             <br />
           </div>
@@ -128,7 +128,7 @@ const AddTableData = () => {
             />
             <br />
             {errors.mobile && touched.mobile ? (
-              <i style={{ color: "red" }}>{errors.mobile}</i>
+              <i style={{ color: "red", fontWeight:"bold"  }}>{errors.mobile}</i>
             ) : null}
             <br />
           </div>
@@ -155,7 +155,7 @@ const AddTableData = () => {
             </select>
             <br />
             {errors.class && touched.class ? (
-              <i style={{ color: "red" }}>{errors.class}</i>
+              <i style={{ color: "red", fontWeight:"bold"  }}>{errors.class}</i>
             ) : null}
             <br />
           </div>
@@ -181,7 +181,7 @@ const AddTableData = () => {
             </select>
             <br />
             {errors.division && touched.division ? (
-              <i style={{ color: "red" }}>{errors.division}</i>
+              <i style={{ color: "red", fontWeight:"bold"  }}>{errors.division}</i>
             ) : null}
             <br />
           </div>
@@ -202,7 +202,7 @@ const AddTableData = () => {
             />
             <br />
             {errors.date && touched.date ? (
-              <i style={{ color: "red" }}>{errors.date}</i>
+              <i style={{ color: "red", fontWeight:"bold"  }}>{errors.date}</i>
             ) : null}
             <br />
           </div>
@@ -227,7 +227,7 @@ const AddTableData = () => {
             />
             <br />
             {errors.city && touched.city ? (
-              <i style={{ color: "red" }}>{errors.city}</i>
+              <i style={{ color: "red", fontWeight:"bold"  }}>{errors.city}</i>
             ) : null}
             <br />
           </div>
@@ -250,7 +250,7 @@ const AddTableData = () => {
             />
             <br />
             {errors.state && touched.state ? (
-              <i style={{ color: "red" }}>{errors.state}</i>
+              <i style={{ color: "red", fontWeight:"bold"  }}>{errors.state}</i>
             ) : null}
             <br />
           </div>
@@ -274,7 +274,7 @@ const AddTableData = () => {
             <br />
 
             {errors.country && touched.country ? (
-              <i style={{ color: "red" }}>{errors.country}</i>
+              <i style={{ color: "red", fontWeight:"bold"  }}>{errors.country}</i>
             ) : null}
             <br />
           </div>

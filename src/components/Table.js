@@ -32,6 +32,7 @@ function TableData() {
 
   const handleClose = (e) => {
     setPerson(null);
+    // alert("clicked");
   };
 
   return (
